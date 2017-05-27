@@ -1,14 +1,17 @@
 
-pedido_1 = []
-total = 0.0
-i = 0
+pi = 3.14159
+valores = raw_input()
 
-while i < 2:
-    pedido_1 = pedido_1 + [raw_input()]
-    i += 1
+separados = valores.split(' ', 3)
 
-for pedido in range(len(pedido_1)):
-    separado = pedido_1[pedido].split(' ', 2)
-    total = total + (int(separado[1]) * float(separado[2]))
+area_triangulo = (float(separados[0]) * float(separados[2]))/2
+raio_circulo = area = pi * float(separados[2]) ** 2
+area_trapezio = ((float(separados[0]) + float(separados[1])) * float(separados[2])) / 2
+area_quadrado = float(separados[1]) ** 2
+area_retangulo = float(separados[0]) * float(separados[1])
 
-print("VALOR A PAGAR: R$ %0.2f" % total)
+print("TRIANGULO: %0.3f" % area_triangulo)
+print("CIRCULO: %0.3f" % raio_circulo)
+print("TRAPEZIO: %0.3f" % area_trapezio)
+print("QUADRADO: %0.3f" % area_quadrado)
+print("RETANGULO: %0.3f" % area_retangulo)
